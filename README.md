@@ -14,4 +14,17 @@ drums.sh containins the most scuffed drum loop ever, considering that it plays t
 
 drums.sh is a recreation of this [YouTube video](https://www.youtube.com/watch?v=TwJdcgEClMU), which was the entrance into this rabbit hole for me.
 
+find / | aplay
+
+gcc samples.c -lm
+
+./a.out | aplay -f cd
+
+    little endian
+
 Cheers
+
+
+Sources:
+https://lacina.io/posts/making-crazy-sounds-with-aplay/
+https://samcarcagno.altervista.org/psych/sound_proc/sound_proc_R.html
