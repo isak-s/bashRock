@@ -14,18 +14,23 @@ drums.sh containins the most scuffed drum loop ever, considering that it plays t
 
 drums.sh is a recreation of this [YouTube video](https://www.youtube.com/watch?v=TwJdcgEClMU), which was the entrance into this rabbit hole for me.
 
-find / | aplay
+To play some interesting audio:
 
-gcc samples.c -lm
-
-./a.out | aplay -f cd
-
-    little endian
+    find / | aplay
 
 Cheers
 
+I also modulated a bunch of different waveforms that are plotted below.
+
+[sawtooth wave](plots/sawtooth_wave.wav.pdf)
+
+[triangle wave](<plots/triangle_wave.wav full Downsampled waveform.pdf>)
+
+[boing sound effect](<plots/boing.wav full Downsampled waveform.pdf>)
 
 Sources:
 https://lacina.io/posts/making-crazy-sounds-with-aplay/
 
 https://samcarcagno.altervista.org/psych/sound_proc/sound_proc_R.html
+
+
