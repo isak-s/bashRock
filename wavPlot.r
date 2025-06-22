@@ -27,7 +27,7 @@ fs <- wave_data@samp.rate
 t <- (0:(n-1)) / fs
 
 plot_rubric <- str_interp("${filename} first 300 samples raw audio data")
-pdf(str_interp("plots/${plot_rubric}.pdf"))
+png(str_interp("plots/${plot_rubric}.png"))
 plot(t, left_channel, type = "l", main = plot_rubric, xlab = "time", ylab = "Amplitude")
 
 # plot full downsampled waveform
@@ -38,7 +38,7 @@ left_ds <- left_full[seq(1, length(left_full), by = step)]
 t_ds <- (seq(0, length(left_ds)-1) * step) / fs
 
 plot_rubric <- str_interp("${filename} full Downsampled waveform")
-pdf(str_interp("plots/${plot_rubric}.pdf"))
+png(str_interp("plots/${plot_rubric}.png"))
 plot(t_ds, left_ds, type = "l",
      main = str_interp("${filename} - Downsampled waveform"),
      xlab = "Time (s)", ylab = "Amplitude")

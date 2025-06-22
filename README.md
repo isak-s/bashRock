@@ -22,11 +22,13 @@ Cheers
 
 I also modulated a bunch of different waveforms that are plotted below.
 
-[sawtooth wave](plots/sawtooth_wave.wav.pdf)
+![alt text](<plots/sawtooth_wave.wav full Downsampled waveform.png>)
 
-[triangle wave](<plots/triangle_wave.wav full Downsampled waveform.pdf>)
+![alt text](<plots/triangle_wave.wav full Downsampled waveform.png>)
 
-[boing sound effect](<plots/boing.wav full Downsampled waveform.pdf>)
+![alt text](<plots/square_wave.wav first 300 samples raw audio data.png>)
+
+![alt text](<plots/boing.wav full Downsampled waveform.png>)
 
 Sources:
 https://lacina.io/posts/making-crazy-sounds-with-aplay/
