@@ -5,5 +5,7 @@ double sine_wave(double time, double freq);
 double pulse_wave(double time, double freq, double duty);
 double square_wave(double time, double freq);
 double sawtooth_wave(double time, double freq);
+double triangle_wave(double time, double freq);
+double noise(double time, double freq);
 
 #endif

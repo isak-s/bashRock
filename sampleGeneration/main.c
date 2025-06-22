@@ -56,7 +56,7 @@ void write_wav_header(FILE *fp, uint32_t num_samples) {
 
 Sample sample_at(double time) {
     Sample s;
-    s.left = sawtooth_wave(time, 440);  // A4
+    s.left = noise(time, 440);  // A4
     s.right = 0.0;
     return s;
 }
@@ -71,7 +71,7 @@ void write_sample(FILE *fp, Sample sample) {
 int main() {
     const uint32_t num_samples = SAMPLE_RATE * SECONDS;
 
-    FILE *fp = fopen("output.wav", "wb");
+    FILE *fp = fopen("noise.wav", "wb");
     if (!fp) {
         perror("Failed to open file");
         return 1;
@@ -86,6 +86,6 @@ int main() {
     }
 
     fclose(fp);
-    printf("WAV file written: output.wav\n");
+    printf("WAV file written: noise.wav\n");
     return 0;
 }

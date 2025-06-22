@@ -3,6 +3,8 @@
 #include <limits.h>
 #include <stdint.h>
 #include <string.h>
+#include <time.h>
+#include <stdlib.h>
 
 #include "config.h"
 
@@ -21,4 +23,12 @@ double sine_wave(double time, double freq){
 
 double sawtooth_wave(double time, double freq) {
     return 2 * (freq * time - floor(freq * time + 0.5));
+}
+
+double triangle_wave(double time, double freq) {
+    return fabs(4.0 * fmod(freq * time + 0.75, 1.0) - 2.0) - 1.0;
+}
+
+double noise() {
+  return 2.0 * rand() / RAND_MAX - 1.0;
 }
