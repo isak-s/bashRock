@@ -6,9 +6,13 @@ library(stringr)
 
 args <- commandArgs(trailingOnly = TRUE)
 
-filename <- args[1]
+if (length(args) == 0) {
+    filename <- "output.wav"
+} else {
+    filename <- args[1]
+}
 
-wave_data <- tuneR::readWave(str_interp("samples/${filename}"))
+wave_data <- tuneR::readWave(str_interp("sampleGeneration/${filename}"))
 
 # Plot first 300 samples
 

@@ -56,7 +56,7 @@ void write_wav_header(FILE *fp, uint32_t num_samples) {
 
 Sample sample_at(double time) {
     Sample s;
-    s.left = sine(time, 440);  // A4
+    s.left = sawtooth_wave(time, 440);  // A4
     s.right = 0.0;
     return s;
 }

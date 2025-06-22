@@ -1,8 +1,9 @@
 #ifndef WAVE_FORMS_H
 #define WAVE_FORMS_H
 
-double sine(double time, double freq);
-double pulse(double time, double freq, double duty);
-double square(double time, double freq);
+double sine_wave(double time, double freq);
+double pulse_wave(double time, double freq, double duty);
+double square_wave(double time, double freq);
+double sawtooth_wave(double time, double freq);
 
 #endif
