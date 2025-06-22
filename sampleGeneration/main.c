@@ -4,13 +4,8 @@
 #include <stdint.h>
 #include <string.h>
 
-#ifndef M_PI
-#define M_PI 3.14159265358979323846
-#endif
-#define SAMPLE_RATE 44100
-#define NUM_CHANNELS 2
-#define BITS_PER_SAMPLE 16
-#define SECONDS 2
+#include "config.h"
+#include "wave_forms.h"
 
 typedef struct {
     double left;
@@ -61,7 +56,7 @@ void write_wav_header(FILE *fp, uint32_t num_samples) {
 
 Sample sample_at(double time) {
     Sample s;
-    s.left = sin(440.0 * 2.0 * M_PI * time);  // A4
+    s.left = sine(time, 440);  // A4
     s.right = 0.0;
     return s;
 }
